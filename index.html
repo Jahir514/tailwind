@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./output/index.css">
+</head>
+
+<body class="bg-gray-500 font-poppins">
+    <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
+        <div class="flex items-center justify-between">
+            <span class="font-semibold text-2xl cursor-pointer">Logo</span>
+            <span class="text-3xl cursor-pointer md:hidden block"><ion-icon name="menu"
+                    onclick="Menu(this)"></ion-icon></span>
+        </div>
+        <ul
+            class="menu md:flex md:items-center md:space-x-6 md:space-y-0 space-y-4 mt-3 md:mt-0 z-[-1] md:z-auto absolute md:static bg-white w-full md:w-auto left-0 py-7 md:py-0 pl-5 md:pl-0 opacity-0 md:opacity-100">
+            <li>
+                <a href="#" class="md:text-md hover:text-cyan-500 duration-500">Home</a>
+            </li>
+            <li>
+                <a href="#" class="md:text-md hover:text-cyan-500 duration-500">Service</a>
+            </li>
+            <li>
+                <a href="#" class="md:text-md hover:text-cyan-500 duration-500">Blog</a>
+            </li>
+            <li>
+                <a href="#" class="md:text-md hover:text-cyan-500 duration-500">About us</a>
+            </li>
+            <li>
+                <a href="#" class="md:text-md hover:text-cyan-500 duration-500">Contact us</a>
+            </li>
+            <button class="btn-purple">
+                Get started
+            </button>
+        </ul>
+    </nav>
+    <div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/pexels-eberhard-grossgasteiger-572897.jpg" alt="slide 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/pexels-frans-van-heerden-624015.jpg" alt="slide 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/pexels-luis-del-río-15286.jpg" alt="slide 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/pexels-stein-egil-liland-3408744.jpg" alt="slide 4">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        function Menu(e) {
+            let list = document.querySelector('.menu');
+            e.name === 'menu' ? (e.name = 'close', list.classList.add('opacity-100')) : (e.name = 'menu', list.classList.remove('opacity-100'))
+        }
+    </script>
+</body>
+
+</html>

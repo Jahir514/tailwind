@@ -1,0 +1,17 @@
+{
+  "name": "tailwind_basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/tailwind.css -o ./output/index.css -w"
+  },
+  "author": "Jahir hasan",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "tw-elements": "^1.0.0-beta1"
+  }
+}

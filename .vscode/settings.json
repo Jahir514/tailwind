@@ -1,0 +1,8 @@
+{
+    "css.validate": false,
+    "tailwindCSS.emmetCompletions": true,
+    "css.lint.unknownAtRules": "ignore",
+    "[css]": {
+        "editor.defaultFormatter": "bradlc.vscode-tailwindcss"
+    }
+}
